@@ -11,7 +11,7 @@ scripts:
 
 deploy:
   provider: elasticbeanstalk
-  region: us-east-1
+  region: “us-east-1”
   # Dockerreact-env.eba-p2cz2gx8.us-east-1.elasticbeanstalk.com 
   app: "Docker-react"
   env: "Dockerreact-env"
@@ -22,5 +22,4 @@ deploy:
     branch: main
     # only pushes to main will triger deployment
   access_key_id: $AWS_ACCESS_KEY
-  secret_access_key: 
-    secure: "$AWS_SECRET_KEY"
+  secret_access_key: "$AWS_SECRET_KEY"
