@@ -1,22 +1,8 @@
-version: '3.3'
+version: "3.3"
 services:
-  web: 
+  web:
     build:
-    # build: . represents the current directory
       context: .
-      # context  specifies the path where all the files and folders for this image to be pulled from
-      dockerfile: Dockerfile.dev
-      # dockerfile specifies the localtion of the dockerfile
-    ports: 
-      - "3000:3000"
-    volumes:
-      - /app/node_modules
-      - .:/app
-  tests: # second container solely for running tests
-    build:
-        context: .
-        dockerfile: Dockerfile.dev
-    volumes:
-        - /app/node_modules
-        - .:/app
-    command: ["npm", "run", "test"] # overwrite start-up commands
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
