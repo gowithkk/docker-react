@@ -19,7 +19,7 @@ deploy:
   butcket_path: "Docker-react"
   # butket_path should be the same as the name of the app
   on:
-    branch: master
+    branch: main
     # only pushes to main will triger deployment
   access_key_id: $AWS_ACCESS_KEY
   secret_access_key: 
